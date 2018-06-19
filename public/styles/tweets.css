@@ -5,11 +5,16 @@
   margin-bottom: 1em;
   border: 0.5px solid grey;
   border-radius: 5px;
-
+  overflow: hidden;
+  opacity: 0.8;
 }
 
 .tweet:hover  .fa {
   display: inline-block;
+}
+
+.tweet:hover {
+  opacity: 1;
 }
 
 
@@ -19,8 +24,6 @@
   display: flex;
   align-items: center;
   background-color: #eee;
-  border-top: 0.5px solid grey;
-  border-radius: 5px 5px 0px 0px;
   justify-content: space-between;
 
 }

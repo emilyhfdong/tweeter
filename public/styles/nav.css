@@ -4,11 +4,12 @@
   right: 0;
   left: 0;
   height: 80px;
-  background-color: #00a087;
-  color: #e8fdff;
+  background-color: #00A087;
+  color: #E8FDFF;
   width: 100%;
   padding-left: 2em;
   padding-right: 2em;
+  z-index: 1;
 }
 
 #nav-bar .logo {
