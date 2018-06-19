@@ -1,0 +1,63 @@
+.tweet {
+  margin-right: 2em;
+  margin-left: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: 0.5px solid grey;
+  border-radius: 5px;
+
+}
+
+
+.tweet header {
+  padding: 10px;
+  border-bottom: 0.5px solid grey;
+  display: flex;
+  align-items: center;
+  background-color: #eee;
+  border-top: 0.5px solid grey;
+  border-radius: 5px 5px 0px 0px;
+  justify-content: space-between;
+
+}
+
+.tweet .pic-and-name {
+  display: flex;
+  align-items: center;
+}
+
+.tweet header .profile-pic {
+  border: 0.5px solid grey;
+  border-radius: 5px;
+  height: 50px;
+  width: 50px;
+
+}
+
+.tweet header .name {
+  margin: 0px;
+  margin-left: 10px;
+
+}
+
+.tweet header .handle {
+  margin: 0px;
+  justify-content: right;
+  font-size: 14px;
+  color: grey;
+}
+
+.tweet .tweet-content {
+  padding: 10px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.tweet footer {
+  padding-left: 10px;
+  font-size: 12px;
+  border-top: 0.5px solid grey;
+
+}
+
