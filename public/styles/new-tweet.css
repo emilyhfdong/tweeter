@@ -28,3 +28,7 @@
 .new-tweet .red-counter {
   color: red;
 }
+
+.new-tweet .errors {
+  color:red;
+}
