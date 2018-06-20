@@ -5,6 +5,7 @@
   padding: 10px;
   border: 0.5px solid grey;
   border-radius: 5px;
+  display: none;
 }
 
 .new-tweet h2 {
@@ -16,6 +17,7 @@
 .new-tweet textarea {
   width: 100%;
   padding: 5px;
+  margin-bottom: 5px;
 }
 
 .new-tweet .counter {
@@ -30,5 +32,5 @@
 }
 
 .new-tweet .errors {
-  color:red;
+  color: red;
 }

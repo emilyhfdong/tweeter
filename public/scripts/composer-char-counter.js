@@ -4,6 +4,5 @@ $(document).ready(function() {
 
     $(this).siblings(".counter").text(charsLeft);
     $(this).siblings(".counter").toggleClass("red-counter", charsLeft < 0);
-
   });
 });

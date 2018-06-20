@@ -9,7 +9,7 @@
   opacity: 0.8;
 }
 
-.tweet:hover  .fa {
+.tweet:hover  footer .fa {
   display: inline-block;
 }
 

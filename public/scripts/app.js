@@ -4,10 +4,8 @@ function escape(str) {
   return div.innerHTML;
 }
 
-
-
 function createTweetElement (dataObj) {
-  let $twe = $(`
+  let $tweetElement = $(`
         <article class="tweet">
           <header>
             <div class="pic-and-name">
@@ -25,9 +23,7 @@ function createTweetElement (dataObj) {
             </span>
           </footer>
         </article>`);
-
-  return $twe
-
+  return $tweetElement
 }
 
 function renderTweets(dataArr) {
@@ -54,7 +50,6 @@ $(document).ready(function() {
     event.preventDefault();
     $(this).siblings(".errors").empty();
 
-
     if($(".new-tweet textarea").val().trim() === "") {
       $emptyError = $("<p class='emptyError'>Tweet is empty!</p>")
       $(".new-tweet .errors").append($emptyError);
@@ -68,12 +63,16 @@ $(document).ready(function() {
         data: $(this).serialize()
       }).done(function() {
         $(".new-tweet textarea").val("");
+        $(".new-tweet .counter").text("140");
         loadTweets();
       });
     }
-
   });
 
+  $("#nav-bar .compose" ).on("click", function (event) {
+    $(".new-tweet").slideToggle( "slow" );
+    $(".new-tweet textarea").focus();
+  });
 });
 
 

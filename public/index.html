@@ -30,15 +30,17 @@
 
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
-      <img class="logo" src="/images/bird.png">
-      <span class="header">Tweeter</span>
+      <div class="logo-and-header">
+        <img class="logo" src="/images/bird.png">
+        <span class="header">Tweeter</span>
+      </div>
+      <div class="buttons">
+        <button type="button" class="compose">Compose</button>
+      </div>
     </nav>
-
-
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form id="new-tweet-form" method="POST" action="/tweets/">
@@ -48,12 +50,9 @@
         </form>
         <div class="errors"></div>
       </section>
-
       <section id="tweet-container"></section>
-
-
-
     </main>
 
   </body>
+
 </html>

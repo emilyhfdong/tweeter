@@ -10,17 +10,11 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
-
 body {
   margin: 0;
   color: #244751;
   background-color: #EEE;
   font-family: 'Roboto Condensed', sans-serif;
-  /*display: flex;
-  justify-content: center;*/
 }
 
 body main {
@@ -28,11 +22,4 @@ body main {
   background-color: white;
   margin: auto;
   padding-top: 140px;
-
-
-
 }
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
