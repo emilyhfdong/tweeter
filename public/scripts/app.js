@@ -78,19 +78,19 @@
   }
 
   function renderTweets(dataArr) {
+    dataArr.reverse();
     let $tweets = dataArr.map(obj => createTweetElement(obj));
+    $("#tweet-container").empty();
     $(`#tweet-container`).append($tweets);
   }
 
 $(document).ready(function() {
-  // renderTweets(data);
 
   function loadTweets() {
     $.ajax ({
       url: 'tweets',
       method: 'GET',
     }).done(function (dataJSON) {
-
       renderTweets(dataJSON);
     })
   }
@@ -102,7 +102,7 @@ $(document).ready(function() {
     $(this).siblings(".errors").find(".emptyError").remove();
     $(this).siblings(".errors").find(".tooLong").remove();
 
-    if($(".new-tweet textarea").val() === "") {
+    if($(".new-tweet textarea").val().trim() === "") {
       $emptyError = $("<p class='emptyError'>Tweet is empty!</p>")
       $(".new-tweet .errors").append($emptyError);
     } else if($(".new-tweet textarea").val().length > 140) {
