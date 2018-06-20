@@ -84,6 +84,21 @@ const data = [
 
 $(document).ready(function() {
   renderTweets(data);
+
+  $("#new-tweet-form").on("submit", function (event) {
+    event.preventDefault();
+
+    $.ajax({
+      url: '/tweets',
+      method: 'POST',
+      data: $(this).serialize()
+    }).done(function() {
+      $(".new-tweet textarea").val("");
+    })
+
+  });
+
+
 });
 
 
