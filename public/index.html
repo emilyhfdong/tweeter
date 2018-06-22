@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- App CSS -->
-    <link rel="stylesheet" href="main.css">
-
+    <link rel="stylesheet" href="/styles/main.css">
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -22,7 +21,6 @@
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
   </head>
-
   <body>
 
     <!-- Top nav bar (fixed) -->
@@ -38,6 +36,7 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <!-- New tweet form -->
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form id="new-tweet-form" method="POST" action="/tweets/">
@@ -47,6 +46,7 @@
         </form>
         <div class="errors"></div>
       </section>
+      <!-- section for all the tweets -->
       <section id="tweet-container"></section>
     </main>
 

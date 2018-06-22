@@ -7,12 +7,13 @@ const express       = require("express");
 const bodyParser    = require("body-parser");
 const nodeSassMiddleware = require('node-sass-middleware');
 const path = require('path');
-
 const app           = express();
-
+const MongoClient = require("mongodb").MongoClient;
+const MONGODB_URI = "mongodb://localhost:27017/tweeter";
 
 app.use(bodyParser.urlencoded({ extended: true }));
-console.log(__dirname)
+
+//use SASS middeware
 app.use(nodeSassMiddleware({
     src: path.join(__dirname, '../src'),
     dest: path.join(__dirname, '../public/styles'),
@@ -20,15 +21,9 @@ app.use(nodeSassMiddleware({
     outputStyle: 'compressed'
 }));
 
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, '../public')));
 
-
-// The in-memory database of tweets. It's a basic object with an array in it.
-// const db = require("./lib/in-memory-db");
-
-const MongoClient = require("mongodb").MongoClient;
-const MONGODB_URI = "mongodb://localhost:27017/tweeter";
-
+//commect to database
 MongoClient.connect(MONGODB_URI, (err, db) => {
 
   if (err) {
@@ -39,7 +34,6 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
   console.log(`Connected to mongodb: ${MONGODB_URI}`);
 
   const DataHelpers = require("./lib/data-helpers.js")(db);
-
   const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 
   app.use("/tweets", tweetsRoutes);
