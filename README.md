@@ -7,18 +7,40 @@
 
 ## Final Product
 
-#### URL index page
+#### Compose Tweet
 
-- Shows list of all of user's short URLs
+- Compose tweet with under 140 characters
 
-!["Screenshot of show URL page"](https://github.com/emilyhfdong/TinyApp/blob/master/docs/url-index.png)
+!["Screenshot of compose page"](https://github.com/emilyhfdong/tweeter/blob/master/docs/compose-tweet.png)
+
+#### Post Tweet
+
+- New tweet fetched using AJAX and rendered dynamically
+
+!["Screenshot of post page"](https://github.com/emilyhfdong/tweeter/blob/master/docs/post-tweet.png)
+
+#### Errors
+
+- User will be alerted and prevented from posting tweets that are empty or too long
+
+!["Screenshot of empty tweet"](https://github.com/emilyhfdong/tweeter/blob/master/docs/empty-tweet.png)
+
+!["Screenshot of too long tweet"](https://github.com/emilyhfdong/tweeter/blob/master/docs/too-long.png)
+
+#### Toggle Form
+
+- Compose form toggles when the "compose" button is clicked
+
+!["Screenshot of too long tweet"](https://github.com/emilyhfdong/tweeter/blob/master/docs/toggle-form.png)
 
 
 ## Dependencies
 
 - Node.js
 - Express
-- EJS
-- bcrypt
 - body-parser
-- cookie-session
+- mongodb
+- SASS
+- chance
+- path
+
