@@ -1,0 +1,70 @@
+.tweet {
+  @include makeBorder($thickness: 0.5px, $color: gray);
+  margin-right: 2em;
+  margin-left: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-radius: 5px;
+  overflow: hidden;
+  opacity: 0.8;
+  &:hover {
+    footer .fa {
+      display: inline-block;
+    }
+    opacity: 1;
+  }
+  header {
+    padding: 10px;
+    border-bottom: 0.5px solid gray;
+    display: flex;
+    align-items: center;
+    background-color: #EEEEEE;
+    justify-content: space-between;
+    .pic-and-name {
+      display: flex;
+      align-items: center;
+      .profile-pic {
+        @include makeBorder($thickness: 0.5px, $color: gray);
+        border-radius: 5px;
+        height: 50px;
+        width: 50px;
+      }
+      .name {
+        margin: 0px;
+        margin-left: 10px;
+      }
+    }
+    .handle {
+      margin: 0px;
+      justify-content: right;
+      font-size: $fontsize;
+      color: gray;
+    }
+  }
+  .tweet-content {
+    padding: 10px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+  }
+  footer {
+    padding: 10px;
+    font-size: $fontsize;
+    border-top: 0.5px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p {
+      margin: 0px;
+    }
+    .icons {
+      .fa {
+        padding-left: 3px;
+        padding-right: 3px;
+        font-size: $fontsize;
+        display: none;
+      }
+    }
+  }
+}
+

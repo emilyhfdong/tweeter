@@ -1,0 +1,45 @@
+#nav-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 80px;
+  background-color: #00A087;
+  color: #E8FDFF;
+  width: 100%;
+  padding-left: 2em;
+  padding-right: 2em;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo-and-header {
+    display: flex;
+    align-items: center;
+    .logo {
+      height: 80px;
+      width: 80px;
+    }
+    .header {
+      padding-left: 10px;
+      font-size: 200%;
+      line-height: 80px;
+    }
+  }
+  .buttons {
+    .compose {
+      @include makeBorder($thickness: 1px, $color: black);
+      background-color: white;
+      height: 60px;
+      border-radius: 5px;
+      padding: 10px;
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+}
+

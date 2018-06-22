@@ -16,7 +16,9 @@
     "express": "^4.13.4",
     "md5": "^2.1.0",
     "moment": "^2.22.2",
-    "mongodb": "^2.2.35"
+    "mongodb": "^2.2.35",
+    "node-sass-middleware": "^0.11.0",
+    "sass": "^1.6.2"
   },
   "devDependencies": {
     "nodemon": "^1.9.2"
